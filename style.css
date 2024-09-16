@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Roboto", sans-serif;
+    font-weight: 300;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1{
+    text-align: center;
+    margin:10px auto;
+}
+
+main{
+    max-width:90%;
+    margin:0 auto;    
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-list a:hover {
+    background-color: #003afa;
+    color:white;
+    border-radius: 5px;
+}
+
+.grid-pattern{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-gap:10px;  
+    max-width:800px;
+    width: 100%;
+}
+
+.grid-pattern img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.grid-one {
+    grid-column: 1 / 3; 
+    grid-row: 1; 
+}
+
+.grid-two {
+    grid-column: 3; 
+    grid-row: 1;
+}
+
+.grid-three {
+    grid-column: 1; 
+    grid-row: 2 / 4; 
+}
+
+.grid-four {
+    grid-column: 2 / 4; 
+    grid-row: 2; 
+}
+
+.grid-five {
+    grid-column: 2; 
+    grid-row: 3; 
+}
+
+.grid-six {
+    grid-column: 3; 
+    grid-row: 3;
+}
+
+.container-img{
+    position:relative;
+    width: 100%;
+    height: 100%;
+}
+
+.container-text{
+    position: absolute;
+    bottom: 10px; 
+    left: 10px; 
+    background-color: rgba(7, 140, 169, 0.6);
+    color: white;
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-list a {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
